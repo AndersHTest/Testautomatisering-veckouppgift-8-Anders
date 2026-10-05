@@ -8,7 +8,7 @@
 | Uppgift                   | Status | 🟠🟡🟢 |
 |---------------------------|--------|--------|
 | 1 - Gruppövning           | 99%    | 🟡     |
-| 2 - Öva mera              | 1  %   | 🟡     |
+| 2 - Öva mera              | 100%   | 🟢     |
 
 ### 1 - Gruppövning
 
@@ -123,19 +123,55 @@ Testscenrio 4: (AK6)
 Utgå från detta formulär: https://tap-ht24-testverktyg.github.io/form-demo/ 
 Ta fram user stories, acceptanskriterier, testscenarier och implementera dem i Playwright.
 
+test_form_demo.py
+
+User Stories:
+<pre>
+Som testare
+vill jag kontrollera att rubriken är korrekt
+så att sidan ser ut som den ska
+</pre>
+<pre>
+Som en test-användare
+vill jag fylla i ett formulär korrekt
+så att sidans submit-knapp blir aktiverad
+</pre>
+<pre>
+Som en testanvändare
+vill jag fylla i ett formulär felaktigt
+så att sidans submit-knapp inte blir aktiverad
+</pre>
+
+Acceptanskriterier:
+<pre>
+AK1: 
+Rubriken ska vara "Registrera dig".
+</pre>
 
 <pre>
-Som x
-vill jag kunna skapa och ta bort widgets
-så att sidan blir anpassad efter hur jag vill ha den
+AK2: 
+Knappen "Ok nu kör vi" ska vara aktiverad.
+</pre>
+
+<pre>
+AK3: 
+Knappen "Ok nu kör vi" ska vara inaktiverad.
+</pre>
+
+Testscenarier:
+
+<pre>
+Testscenario 1: AK1
+1. Surfa in på webbsidan https://tap-ht24-testverktyg.github.io/form-demo/.
+2. Kontrollera att rubriken är "Registrera dig".
 </pre>
 <pre>
-Som x
-vill jag byta plats på två widgets
-så att sidan blir anpassad efter hur jag vill ha den
-</pre>
-<pre>
-Som x
-vill jag ändra tidsinställning på timer
-så att den motsvarar tiden jag vill räkna ned ifrån
+Testscenario 2: AK2 och AK3
+1. Surfa in på webbsidan https://tap-ht24-testverktyg.github.io/form-demo/.
+2. Fyll i ett namn i namnfältet (TestUser)
+3. Fyll i ett födelseår i födelseårsfältet (2001)
+4. Fyll i en mailadress i E-Post-fältet (test_user@email.com)
+5. Kontrollera att knappen "Ok nu kör vi är inaktiverad.
+6. fyll i ett lösenord i lösenordsfältet ("12342323")
+7. Kontrollera att knappen "Ok nu kör vi" är aktiverad.
 </pre>
