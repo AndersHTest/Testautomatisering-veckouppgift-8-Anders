@@ -7,8 +7,8 @@
 
 | Uppgift                   | Status | 🟠🟡🟢 |
 |---------------------------|--------|--------|
-| 1 - Gruppövning           | 100%   | 🟢     |
-| 2 - Öva mera              | 100%   | 🟢     |
+| 1 - Gruppövning           | 99%    | 🟡     |
+| 2 - Öva mera              | 1  %   | 🟡     |
 
 ### 1 - Gruppövning
 
@@ -28,7 +28,7 @@ så att sidan blir anpassad efter hur jag vill ha den
 <pre>
 Som x
 vill jag ändra tidsinställning på timer
-så att den motsvarar min paus
+så att den motsvarar tiden jag vill räkna ned ifrån
 </pre>
 <pre>
 Som x
@@ -73,9 +73,47 @@ AK5: När jag ändrar texten i min anteckning och trycker enter så ska min text
 AK6: När jag trycker på en temafärg så ska färgen på sidan ändras till motsvarande tema.
 </pre>
 
-
 3. Skriv ner testscenarier för varje acceptanskriterium.<br>(Ett scenario kan täcka in flera acceptanskriterier.)
+#### Testscenerier:
 
+<pre>
+Testscenario 1: (AK1 och AK2)
+1. Surfa in på webbsidan https://lejonmanen.github.io/timer-vue/
+2. Tryck på add timer och add note
+3. Kontrollera att timern är synlig
+4. Tryck på pil upp på anteckningen
+5. Kontrollera att anteckningen ligger ovanför timern.
+6. Tryck på papperskorgen på timern och anteckningen
+7. Kontrollera att båda widgetarna är borttagna och inte syns.
+</pre>
+<pre>
+Testscenrio 2: (AK3 och AK4)
+1. Surfa in på webbsidan https://lejonmanen.github.io/timer-vue/
+2. Tryck på add timer
+3. Tryck på kugghjulet till höger i timer-widgeten.
+4. Mata in tiden du vill räkna ned ifrån.
+5. Tryck på Reset.
+6. Tryck på Start
+7. Kontrollera att pause-knappen syns
+8. Tryck på Pause
+9. Kontrollera att Start-knappen syns
+10. Tryck på Reset
+11. Kontrollera att timern är inställd på tiden som angavs i steg 4.
+</pre>
+<pre>
+Testscenrio 3: (AK5)
+1. Surfa in på webbsidan https://lejonmanen.github.io/timer-vue/
+2. Tryck på add note
+3. Tryck på "Click to change text"
+4. Skriv Test och tryck på [Enter]
+5. Kontrollera att anteckningen är synlig på webbsidan
+</pre>
+<pre>
+Testscenrio 4: (AK6)
+1. Surfa in på webbsidan https://lejonmanen.github.io/timer-vue/
+2. Under Select theme, tryck på Dark
+3. Kontrollera att bakgrundsfärgen på sidan och färgen på knapparna ändras
+</pre>
 
 4. Implementera E2E-tester i Playwright för utvalda scenarier.<br>Gör så många ni hinner med.
 
@@ -84,3 +122,20 @@ AK6: När jag trycker på en temafärg så ska färgen på sidan ändras till mo
 
 Utgå från detta formulär: https://tap-ht24-testverktyg.github.io/form-demo/ 
 Ta fram user stories, acceptanskriterier, testscenarier och implementera dem i Playwright.
+
+
+<pre>
+Som x
+vill jag kunna skapa och ta bort widgets
+så att sidan blir anpassad efter hur jag vill ha den
+</pre>
+<pre>
+Som x
+vill jag byta plats på två widgets
+så att sidan blir anpassad efter hur jag vill ha den
+</pre>
+<pre>
+Som x
+vill jag ändra tidsinställning på timer
+så att den motsvarar tiden jag vill räkna ned ifrån
+</pre>
